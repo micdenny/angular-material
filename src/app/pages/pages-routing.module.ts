@@ -5,8 +5,14 @@ import { PagesComponent } from './pages.component';
 const routes: Routes = [
   {
     path: '',
-    component: PagesComponent
-  }
+    component: PagesComponent,
+    children: [
+      {
+        path: 'address-form',
+        loadChildren: () => import('./address-form/address-form.module').then((m) => m.AddressFormModule),
+      },
+    ],
+  },
 ];
 
 @NgModule({
