@@ -11,6 +11,10 @@ const routes: Routes = [
         path: 'address-form',
         loadChildren: () => import('./address-form/address-form.module').then((m) => m.AddressFormModule),
       },
+      {
+        path: 'table',
+        loadChildren: () => import('./table/table.module').then((m) => m.TableModule),
+      },
     ],
   },
 ];
